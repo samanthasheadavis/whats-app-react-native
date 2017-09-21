@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolves to mock data 1`] = `
+Array [
+  Object {
+    "incoming": true,
+    "message": "Hi Samantha",
+  },
+  Object {
+    "incoming": false,
+    "message": "Hey this is Samantha",
+  },
+  Object {
+    "incoming": true,
+    "message": "I know.",
+  },
+]
+`;

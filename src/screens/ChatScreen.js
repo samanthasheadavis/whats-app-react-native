@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getMockData } from '../services/api';
 import { View, Text, StyleSheet, Button, FlatList } from 'react-native';
 
-export default class Home extends React.Component {
+export default class ChatScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     title: `Chat with ${navigation.state.params.name}`
   })
