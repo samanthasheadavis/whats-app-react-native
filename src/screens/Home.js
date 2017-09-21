@@ -9,6 +9,7 @@ export default class Home extends React.Component {
     return (
       <View style={styles.container }>
         <Button title='Navigate to Chat Screen' onPress={() => this.props.navigation.navigate('chat',{ name: 'Samantha'})}/>
+        <Button title='Navigate to Collapse Screen' onPress={() => this.props.navigation.navigate('collapse',{ name: 'Samantha'})}/>
       </View>
     )
   }
