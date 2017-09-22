@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getMockData } from '../services/api';
+import { getMessages } from '../services/api';
 import { View, Text, StyleSheet, Button, FlatList, ImageBackground } from 'react-native';
 
 export default class ChatScreen extends React.Component {
@@ -12,11 +12,14 @@ export default class ChatScreen extends React.Component {
   }
 
   componentDidMount(){
-    getMockData().then((messages) => {
-      this.setState({
-        messages
+     this.unsubscribeGetMessages = getMessages((snapshot) => {
+     this.setState({
+        messages: Object.values(snapshot.val())
       })
-    });
+     })
+    }
+  componentWillUnmount(){
+    this.unsubscribeGetMessages();
   }
 
   getMessageRow(item){
