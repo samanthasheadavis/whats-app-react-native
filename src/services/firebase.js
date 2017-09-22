@@ -9,8 +9,11 @@ export const initialize = () => firebase.initializeApp({
   messagingSenderId: "295394625696"
 })
 
-
 export const setListener = (endpoint, updaterFn) => {
     firebase.database().ref(endpoint).on('value', updaterFn);
     return () => firebase.database().ref(endpoint).off();
+}
+
+export const pushData = (endpoint, data) => {
+  return firebase.database().ref(endpoint).push(data);
 }
