@@ -26,7 +26,6 @@ class ChatScreen extends React.Component {
   }
 
   render(){
-    console.log(this.props)
     return (
       <ImageBackground
         style={styles.container}
